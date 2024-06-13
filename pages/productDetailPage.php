@@ -9,6 +9,12 @@
         <link rel="icon" href="../assets/images/image.png" type="image/icon type">
     </head>
     <body>
+        <style>
+            .product-detail-img img {
+                width: 100%;
+                height: auto;
+            }
+        </style>
         <!-- Header -->
         <?php include "../includes/header.php" ?>
         <section class="pr-main container">
@@ -41,11 +47,11 @@
                     <?php
                     if ($product['SpecialPrice']!=0){
                             echo "<div style='display:flex'>";
-                            echo"<div class='price-d'>".$product["SpecialPrice"]." DT</div>";
-                            echo "<div class='price-bd'>".$product['OldPrice']." DT</div>";
-                            echo"<div class='discount'><p>".$product['Discount']." DT</p></div>" ;
+                            echo"<div class='price-d'>".$product["SpecialPrice"]." $</div>";
+                            echo "<div class='price-bd'>".$product['OldPrice']." $</div>";
+                            echo"<div class='discount'><p>".$product['Discount']." $</p></div>" ;
                             echo "</div>";
-                        } else echo "<div class='price-d'>".$product['OldPrice']." DT</div>";
+                        } else echo "<div class='price-d'>".$product['OldPrice']." $</div>";
                     
                     ?>
                 </div>
